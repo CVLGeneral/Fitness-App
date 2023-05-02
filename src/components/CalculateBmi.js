@@ -16,6 +16,7 @@ const CalculateBmi = () => {
     toast.error('Please enter a valid weight and height!', {
       position: toast.POSITION.TOP_RIGHT,
     });
+    
      
     } else {
       let bmi = (weight / (height * height));
