@@ -36,3 +36,56 @@
     transform: rotate(360deg);
   }
 }
+
+.bmi-card {
+  width: 400px;
+  height: 445px;
+  text-align: center;
+  background: #fff;
+  border-radius: '8px';
+  padding: 5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding-bottom: 20px;
+  box-shadow: 0px 0px 12px #ccc;
+  margin: 20px;
+}
+
+.bmi-card-input {
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 8px 4px;
+  margin: 8px 0;
+  border-radius: 8px;
+}
+
+.bmi-card label {
+  color: #1460e5;
+
+}
+.bmi-card h5, h1{
+  color: #1460e5;
+
+}
+.bmi-card p {
+  color: #1460e5;
+
+}
+.bmi-card-btn {
+  display: block;
+  width: 100%;
+  font-size: 1rem;
+  margin: 8px 0;
+  padding: 10px 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.bmi-card-btn-outline {
+  background-color: #fff;
+}
+
+
+
+
