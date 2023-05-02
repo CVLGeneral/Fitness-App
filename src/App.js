@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import Loader from "../src/components/Loader";
+
+
+//make sure you add your imports
+
+
 
 function App() {
+  const [loaded, setLoaded] = useState(true);
+
+  useEffect(() => {
+    let timer = setTimeout(() => setLoaded(false), 4000);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+     {loaded ? (
+       <Loader />
+      ) : (
+        <Section>
+          {/* <Navbar /> */}
+          <Routes>
+            {/* <Route path="/" element={<Home />} /> */}
+            {/* <Route path={`/exercise/:id`} element={<ExerciseDetail />} /> */}
+          </Routes>
+          {/* <Footer /> */}
+        </Section>
+      )}
+
+    
+    
+    
+    </>
+
   );
 }
-
+const Section = styled.section``;
 export default App;
