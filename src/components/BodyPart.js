@@ -1,12 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 
-const BodyFeature = ({ item, img, setBodyFeature, BodyFeature }) => {
+const BodyPart = ({ item, img, setBodyPart, BodyPart }) => {
   return (
     <Card
       type="button"
       style={
-        BodyFeature === item
+        BodyPart === item
           ? {
               borderTop: "5px solid #1460e5",
               borderBottom: "5px solid #1460e5",
@@ -14,7 +14,7 @@ const BodyFeature = ({ item, img, setBodyFeature, BodyFeature }) => {
           : { border: "none" }
       }
       onClick={() => {
-        setBodyFeature (item);
+        setBodyPart (item);
         // console.log(item);
         window.scrollTo({ top: 1800, left: 100, behavior: "smooth" });
       }}
@@ -70,4 +70,4 @@ const Card = styled.div`
   }
 `;
 
-export default BodyFeature;
+export default BodyPart;

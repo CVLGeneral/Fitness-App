@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 // import Navbar from "./components/Navbar";
 // import Footer from "./components/Footer";
-import BodyFeature from "./components/BodyFeature";
+import BodyPart from "./components/BodyPart";
 import { Routes, Route } from "react-router-dom";
 // import Home from "./pages/Home";
 import ExerciseDetail from "./components/Detail";
 import Loader from "../src/components/Loader";
+import SimilarHorizontal from "./components/SimilarHorizontal";
+
 const App = () => {
   const [loaded, setLoaded] = useState(true);
 
@@ -18,7 +20,8 @@ const App = () => {
   }, []);
   return (
     <div>
-      <BodyFeature />
+      <BodyPart />
+      <SimilarHorizontal />
 
       {loaded ? (
         <Loader />
