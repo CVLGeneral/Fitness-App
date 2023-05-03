@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Loader from "../src/components/Loader";
+import { Routes, Route } from 'react-router-dom';
+
 
 
 //make sure you add your imports
@@ -25,8 +27,8 @@ function App() {
         <Section>
           {/* <Navbar /> */}
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
-            {/* <Route path={`/exercise/:id`} element={<ExerciseDetail />} /> */}
+            {/* <Route path="/" element={<Home />} />
+            <Route path={`/exercise/:id`} element={<ExerciseDetail />} />  */}
           </Routes>
           {/* <Footer /> */}
         </Section>
