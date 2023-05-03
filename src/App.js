@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import Home from "./components/Home"
 
-// import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
+
 import BodyPart from "./components/BodyPart";
 
 import Navbar from "./components/Navbar";
@@ -10,9 +10,9 @@ import Footer from "./components/Footer";
 
 
 import { Routes, Route } from "react-router-dom";
-import Home from "./src/components/Home";
-import ExerciseDetail from "./src/components/ExerciseDetail";
-import Loader from "../src/components/Loader";
+
+import ExerciseDetail from "./components/ExerciseDetail"
+import Loader from "./components/Loader";
 import SimilarHorizontal from "./components/SimilarHorizontal";
 
 const App = () => {
