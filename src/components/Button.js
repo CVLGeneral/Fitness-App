@@ -31,4 +31,4 @@ const Btn = styled.a`
     border-radius: 4px;
   }
 `;
-export default Button;vvv
+export default Button;
