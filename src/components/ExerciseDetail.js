@@ -28,11 +28,11 @@ const ExerciseDetail = ({ exerciseDetail }) => {
         <h3 className="heading">{name}</h3>
 
         <p className="discription">
-          Exercises keep you strong.{" "}
-          <strong style={{ color: "#1460e5" }}>{name}</strong> is the one of the
+          Exercises make you stronger and more fit.{" "}
+          <strong style={{ color: "#1460e5" }}>{name}</strong> is one of the
           best exercises to target your{" "}
           <strong style={{ color: "#1460e5" }}>{target}</strong>. It will help
-          you to improve your mood and gain energy.
+          you boost your energy and imrpove your mood.
         </p>
         {ExtraDetails.map((item) => (
           <div key={item} className="muscleDetail">
