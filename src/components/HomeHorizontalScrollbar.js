@@ -1,21 +1,18 @@
-
- 
-
 import React, { useRef } from "react";
 import styled from "styled-components";
 import BodyPart from "./BodyPart";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import All from "../assets/icons/All.png";
-import Arms from "../assets/icons/arms.png";
-import Back from "../assets/icons/back.png";
-import Chest from "../assets/icons/chest.png";
-import LowerLegs from "../assets/icons/LowerLegs.png";
-import UpperLegs from "../assets/icons/upperLegs.png";
-import Neck from "../assets/icons/neck.png";
-import Shoulder from "../assets/icons/shoulder.png";
-import Waist from "../assets/icons/waist.png";
-import Cardio from "../assets/icons/cardio.png";
+import All from "../assets/images/icons/All.png";
+import Arms from "../assets/images/icons/arms.png";
+import Back from "../assets/images/icons/back.png";
+import Chest from "../assets/images/icons/chest.png";
+import LowerLegs from "../assets/images/icons/LowerLegs.png";
+import UpperLegs from "../assets/images/icons/upperLegs.png";
+import Neck from "../assets/images/icons/neck.png";
+import Shoulder from "../assets/images/icons/shoulder.png";
+import Waist from "../assets/images/icons/waist.png";
+import Cardio from "../assets/images/icons/cardio.png";
 
 const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
   const BodyPartImage = [
@@ -68,8 +65,9 @@ const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
   for (let i = 0; i < 11; i++) {
     BodyPartImage[i].text = data[i];
   }
+  console.log(BodyPartImage)
 
-  /*========================={arrows}=========================*/
+  // Adding Arrows
   const ref = useRef(null);
 
   const LeftHandler = () => {
@@ -92,6 +90,8 @@ const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
             title={item.id || item.text}
           >
             <BodyPart
+              
+
               item={item.text}
               img={item.img}
               setBodyPart={setBodyPart}

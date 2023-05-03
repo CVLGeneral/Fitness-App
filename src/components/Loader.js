@@ -13,7 +13,7 @@ function Loader() {
   return (
     <LoaderDiv className="loader">
       <SpinningOrbitLoader {...loaderProps} />
-      <h2>Fitness App</h2>
+      <h2>Infinity Fitness</h2>
     </LoaderDiv>
   );
 }

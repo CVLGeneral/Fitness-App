@@ -4,7 +4,8 @@ import styled from "styled-components";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import ExerciseCard from "./Ex.ExerciseCard";
-const SimilarHorizontal = ({ targetMuscleExercises }) => {
+const SimilarExercises = ({ targetMuscleExercises }) => {
+  console.log(targetMuscleExercises)
   const ref = useRef(null);
 
   const LeftHandler = () => {
@@ -80,4 +81,4 @@ const Button = styled.button`
   }
 `;
 
-export default SimilarHorizontal;
+export default SimilarExercises;

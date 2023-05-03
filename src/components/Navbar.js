@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import logo from "../assets/icons/logo.png";
+import logo from "../assets/images/icons/logo.png";
 import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
@@ -36,6 +36,10 @@ const Navbar = () => {
           Exercises
         </a>
 
+        <a className="tag" href="#bmi">
+          BMI
+        </a>
+
         <Button
           className={` ${isNavOpen ? "tag" : ""}`}
           text={`Search Exercise`}
@@ -51,7 +55,7 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #191f2a;
+  background-color: #000;
   box-shadow: rgba(60, 64, 67, 1) 0px 1px 2px 0px,
     rgba(60, 64, 67, 1) 0px 1px 3px 1px;
   .logo {

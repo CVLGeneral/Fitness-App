@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Box, Stack, Typography } from '@mui/material';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import '../App.css';
 
 const CalculateBmi = () => {
   const [weight, setWeight] = useState(0);

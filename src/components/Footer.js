@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import logo from "../assets/icons/logo.png";
+import logo from "../assets/images/icons/logo.png";
 const Footer = () => {
   return (
     <Div>
@@ -16,8 +16,7 @@ const Footer = () => {
   );
 };
 const Div = styled.div`
-  border-top-left-radius: 100px;
-  border-top-right-radius: 100px;
+
   background: #191f2a;
   display: flex;
   padding: 1.5rem;

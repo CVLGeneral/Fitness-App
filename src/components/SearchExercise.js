@@ -25,7 +25,7 @@ const SearchExercise = ({
     fetchExerciseData();
   }, []);
 
-  // console.log(bodyParts);
+  console.log(bodyParts);
   const searchHandler = (e) => {
     setSearch(e.target.value.toLowerCase());
   };
