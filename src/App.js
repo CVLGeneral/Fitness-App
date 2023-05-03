@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-// import Navbar from "./components/Navbar";
-// import Footer from "./components/Footer";
-import BodyFeature from "./components/BodyFeature";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 import { Routes, Route } from "react-router-dom";
-// import Home from "./pages/Home";
-import ExerciseDetail from "./components/Detail";
+import Home from "./src/components/Home";
+import ExerciseDetail from "./src/components/ExerciseDetail";
 import Loader from "../src/components/Loader";
 const App = () => {
   const [loaded, setLoaded] = useState(true);
@@ -18,18 +18,16 @@ const App = () => {
   }, []);
   return (
     <div>
-      <BodyFeature />
-
       {loaded ? (
         <Loader />
       ) : (
         <Section>
-          {/* <Navbar /> */}
+          <Navbar />
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path={`/exercise/:id`} element={<ExerciseDetail />} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </Section>
       )}
     </div>
