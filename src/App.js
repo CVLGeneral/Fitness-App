@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+
 // import Navbar from "./components/Navbar";
 // import Footer from "./components/Footer";
 import BodyPart from "./components/BodyPart";
+
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
+
 import { Routes, Route } from "react-router-dom";
-// import Home from "./pages/Home";
-import ExerciseDetail from "./components/Detail";
+import Home from "./src/components/Home";
+import ExerciseDetail from "./src/components/ExerciseDetail";
 import Loader from "../src/components/Loader";
 import SimilarHorizontal from "./components/SimilarHorizontal";
 
@@ -20,19 +26,21 @@ const App = () => {
   }, []);
   return (
     <div>
+
       <BodyPart />
       <SimilarHorizontal />
+
 
       {loaded ? (
         <Loader />
       ) : (
         <Section>
-          {/* <Navbar /> */}
+          <Navbar />
           <Routes>
-            {/* <Route path="/" element={<Home />} /> */}
+            <Route path="/" element={<Home />} />
             <Route path={`/exercise/:id`} element={<ExerciseDetail />} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </Section>
       )}
     </div>
