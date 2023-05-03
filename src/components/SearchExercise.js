@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import HomeHorizontalScrollbar from "./HomeHorizontalScrollbar";
 
-import { FetchData, ExerciseOptions } from "../utlis/fetchData";
+import { FetchData, ExerciseOptions } from "../utlis/FetchData";
 
 const SearchExercise = ({
   search,
