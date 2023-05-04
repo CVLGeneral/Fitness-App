@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import styled from "styled-components";
 import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
-import ExerciseCard from "./Ex.ExerciseCard";
+import ExerciseCard from "./Exercisecard";
 const SimilarExercises = ({ targetMuscleExercises }) => {
   console.log(targetMuscleExercises)
   const ref = useRef(null);
@@ -20,8 +20,8 @@ const SimilarExercises = ({ targetMuscleExercises }) => {
         <KeyboardArrowLeftIcon />
       </Button>
       <ScrollMenuDiv ref={ref}>
-        {targetMuscleExercises.map((item) => (
-          <div className="child" key={item}>
+        {targetMuscleExercises.map((item,index) => (
+          <div className="child" key={index}>
             <ExerciseCard exercise={item} flg={true} /> 
           </div>
         ))}

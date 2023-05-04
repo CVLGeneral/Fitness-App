@@ -34,8 +34,8 @@ const Detail = ({ exerciseDetail }) => {
           <strong style={{ color: "#1460e5" }}>{target}</strong>. It will help
           you to improve your mood and gain energy.
         </p>
-        {ExtraDetails.map((item) => (
-          <div key={item} className="muscleDetail">
+        {ExtraDetails.map((item,index) => (
+          <div key={index} className="muscleDetail">
             <div className="muscleimage">
               <img src={item.icon} alt={item.name} />
             </div>
@@ -43,6 +43,8 @@ const Detail = ({ exerciseDetail }) => {
           </div>
         ))}
       </div>
+
+      
     </DetailCard>
   );
 };
@@ -166,7 +168,7 @@ const DetailCard = styled.div`
         margin: 0;
         font-size: 1.6rem;
       }
-      .discription {
+      .description {
         font-size: 1.2rem;
       }
       .muscleDetail {

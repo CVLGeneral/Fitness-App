@@ -8,6 +8,7 @@ const Home = () => {
   const [exercises, setExercises] = useState([]);
   const [bodyPart, setBodyPart] = useState("all");
   const [search, setSearch] = useState("");
+  console.log(exercises)
 
   return (
     <Div>
@@ -24,6 +25,7 @@ const Home = () => {
         setExercises={setExercises}
         bodyPart={bodyPart}
         exercises={exercises}
+        
       />
     </Div>
   );

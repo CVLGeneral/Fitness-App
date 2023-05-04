@@ -11,7 +11,7 @@ const BodyPart = ({ item, img, setBodyPart, BodyPart }) => {
               borderTop: "5px solid #1460e5",
               borderBottom: "5px solid #1460e5",
             }
-          : { border: "none" }
+          : { border: "5px solid #000 " }
       }
       onClick={() => {
         setBodyPart (item);

@@ -51,6 +51,8 @@ const ExerciseDetail = () => {
     };
   }, [id]);
 
+
+
   return (
     <div>
       {loaded ? (

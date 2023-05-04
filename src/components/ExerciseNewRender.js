@@ -1,53 +1,59 @@
-import React from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-const ExerciseCard = ({ exercise, index }) => {
+import React, { useEffect, useState } from "react";
 
-  let str;
-  const length = exercise.name.length;
-  if (length > 29) {
-    str = exercise.name.slice(0, 29);
-    str = str.concat(`...`);
-  } else {
-    str = exercise.name;
-  }
+function ExerciseNewRender() {
+  const [exe, setExe] = useState([]);
 
-
+  useEffect(() => {
+    fetch("http://localhost:3005/exercises")
+      .then((response) => response.json())
+      .then((data) => {
+        setExe(data);
+      });
+  }, []);
 
   return (
-    <>
-    <Link
-      style={{ textDecoration: "none" }}
-      className="exercise_card"
-      to={`/exercise/${exercise.id}`}
-    >
-      <ExerciseCardDiv>
-        <div className="image">
-          <img src={exercise.gifUrl} alt={exercise.name} loading="lazy" />
-        </div>
-        <div className="content">
-          <span className="btn">{exercise.bodyPart}</span>
-          <span className="btn btn2">{exercise.target}</span>
-        </div>
-        <h3>{str}</h3>
-      </ExerciseCardDiv>
-
- 
-    </Link>
-
-
-    </>
-
+    <ExerciseGrid>
+      {exe.map((exer) => {
+        return (
+          <ExerciseContainer key={exer.id} id="exercise">
+            <div className="card">
+              <div className="image">
+                <img src={exer.gifUrl} alt={exer.name} loading="lazy" />
+              </div>
+              <div className="content">
+                <span className="btn">{exer.category}</span>
+                <span className="btn btn2">{exer.type}</span>
+              </div>
+              <h3>{exer.name}</h3>
+            </div>
+          </ExerciseContainer>
+        );
+      })}
+    </ExerciseGrid>
   );
-};
+}
 
-const ExerciseCardDiv = styled.div`
+const ExerciseGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 19rem;
+
+  /* Display cards horizontally on larger screens */
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(392px, 1fr));
+  }
+`;
+
+const ExerciseContainer = styled.div`
   padding: 2rem 1rem;
-  width: max-content;
-  height: max-content;
+  width: 392px;
+  height: 536.09px;
   display: flex;
   flex-direction: column;
-  
+
+  justify-content: space-between; // add this property
+  margin-left: 80px;
   gap: 2rem;
   border-radius: 9px;
   box-shadow: rgba(0, 0, 0, 128) 0px 3px 6px, rgba(0, 0, 0, 128) 0px 3px 6px;
@@ -63,6 +69,7 @@ const ExerciseCardDiv = styled.div`
       width: 100%;
     }
   }
+
   .content {
     display: flex;
     justify-content: space-around;
@@ -71,6 +78,7 @@ const ExerciseCardDiv = styled.div`
     .btn {
       padding: 1rem 2rem;
       border: none;
+      margin-top: 32px;
       background-color: #1460e5;
       text-transform: capitalize;
       border-radius: 15px;
@@ -98,6 +106,7 @@ const ExerciseCardDiv = styled.div`
   h3 {
     font-size: 1.3rem;
     text-align: center;
+    margin-top: 52px;
     color: #000;
     font-weight: 600;
     text-transform: capitalize;
@@ -109,7 +118,7 @@ const ExerciseCardDiv = styled.div`
     flex-direction: column;
     gap: 1rem;
     border-radius: 9px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    box-shadow: rgba(0, 0, 0, 128) 0px 3px 6px, rgba(0, 0, 0, 128) 0px 3px 6px;
     box-sizing: border-box;
     &:hover {
       box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 20px 1px,
@@ -130,6 +139,7 @@ const ExerciseCardDiv = styled.div`
         border-radius: 9px;
       }
     }
+
     h3 {
       word-break: word-break;
     }
@@ -148,5 +158,6 @@ const ExerciseCardDiv = styled.div`
     }
   }
 `;
-// const
-export default ExerciseCard;
+
+
+export default ExerciseNewRender

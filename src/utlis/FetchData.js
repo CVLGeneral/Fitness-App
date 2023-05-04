@@ -4,7 +4,7 @@ export const ExerciseOptions = {
     headers: {
         'content-type': 'application/octet-stream',
 		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
-        'X-RapidAPI-Key': '9d5ccac717msh82468a215729f4ap1e5560jsn1b90fc6d7dfd',
+        'X-RapidAPI-Key': '87229d1093mshf923f7bdafc3495p15da68jsn4fea4bfb504c',
         },
   };
   

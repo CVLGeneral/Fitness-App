@@ -3,8 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@chakra-ui/react": "^2.6.1",
     "@emotion/react": "^11.10.8",
     "@emotion/styled": "^11.10.8",
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.3",
     "@react-md/icon": "^5.1.3",
@@ -27,7 +31,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "db":"json-server --watch --port 3005 ./src/data/db.json"
   },
   "eslintConfig": {
     "extends": [

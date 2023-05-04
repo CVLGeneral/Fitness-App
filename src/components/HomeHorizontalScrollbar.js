@@ -83,9 +83,9 @@ const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
         <KeyboardArrowLeftIcon />
       </Button>
       <ScrollMenuDiv ref={ref}>
-        {BodyPartImage.map((item) => (
+        {BodyPartImage.map((item, index) => (
           <Scroll
-            key={item.id || item.text}
+            key={index}
             itemId={item.id || item.text}
             title={item.id || item.text}
           >

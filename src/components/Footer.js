@@ -1,6 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import logo from "../assets/icons/logo.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faTwitter, faInstagram } from '@fortawesome/free-brands-svg-icons'
+
 const Footer = () => {
   return (
     <Div>
@@ -12,6 +15,29 @@ const Footer = () => {
         {" "}
         Created by <a href="https://github.com/CVLGeneral">Group 3</a>
       </div>
+      <div className="foot">      
+       
+        <li>
+          <a href="#home">
+            <FontAwesomeIcon icon={faFacebook} size="2x" color="#fff" />
+          </a>
+        </li>
+        <li>
+          <a href="#home">
+            <FontAwesomeIcon icon={faTwitter} size="2x" color="#fff"/>
+          </a>
+        </li>
+        <li>
+          <a href="#home">
+            <FontAwesomeIcon icon={faInstagram} size="2x" color="#fff" />
+          </a>
+        </li>
+     </div>
+
+     <p style={{color: "#fff"}}>Contact us: @groupthree</p>
+
+
+
     </Div>
   );
 };
@@ -20,7 +46,7 @@ const Div = styled.div`
   background: #000;
   display: flex;
   padding: 1.5rem;
-  gap: 1rem;
+  gap: 10.0rem;
   justify-content: space-around;
   align-items: center;
   .footer {
@@ -29,8 +55,8 @@ const Div = styled.div`
     align-items: center;
     gap: 1rem;
     img {
-      width: 40px;
-      height: 40px;
+      width: 70px;
+      height: 70px;
     }
     h2 {
       color: #fff;
@@ -45,6 +71,22 @@ const Div = styled.div`
       color: #1460e5;
     }
   }
+  .foot{
+    color: #000;
+    display: flex;        
+    justify-content: center; 
+  
+    align-items: center;     
+
+  }
+
+  .foot li {
+    padding:10px; 
+    color: #000;
+
+
+  }
+
   @media screen and (min-width: 280px) and (max-width: 768px) {
     flex-direction: column;
     border-top-left-radius: 50px;

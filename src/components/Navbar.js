@@ -63,8 +63,8 @@ const Nav = styled.nav`
     align-items: center;
     text-decoration: none;
     img {
-      width: 40px;
-      height: 40px;
+      width: 70px;
+      height: 70px;
       margin: 0 20px;
     }
     h2 {
