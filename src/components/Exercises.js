@@ -4,7 +4,7 @@ import { FetchData, ExerciseOptions } from "../utlis/FetchData";
 import styled from "styled-components";
 import ExerciseCard from "../components/Exercisecard";
 const Exercises = ({ exercises, bodyPart, setExercises }) => {
-  // console.log(exercises);
+   console.log(exercises);
 
   const [currentPage, setCurrentPage] = useState(1);
   const ExercisePerPage = 10;
@@ -34,7 +34,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
       setExercises(ExerciseData);
     };
     fetchExerciseData();
-  }, [bodyPart]);
+  }, [bodyPart],[setExercises]);
 
   const paginate = (e, value) => {
     setCurrentPage(value);
