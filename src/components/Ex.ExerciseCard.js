@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 const ExerciseCard = ({ exercise, index }) => {
-  let str;
+  let string;
   const length = exercise.name.length;
   if (length > 20) {
-    str = exercise.name.slice(0, 20);
-    str = str.concat(`..`);
+    string = exercise.name.slice(0, 20);
+    string = string.concat(`..`);
   } else {
-    str = exercise.name;
+    string = exercise.name;
   }
 
   return (
@@ -25,7 +25,7 @@ const ExerciseCard = ({ exercise, index }) => {
           <span className="btn">{exercise.bodyPart}</span>
           <span className="btn btn2">{exercise.target}</span>
         </div>
-        <h3>{str}</h3>
+        <h3>{string}</h3>
       </ExerciseCardDiv>
     </Link>
   );
