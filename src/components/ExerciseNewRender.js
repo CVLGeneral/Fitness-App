@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 
 function ExerciseNewRender() {
   const [exe, setExe] = useState([]);
-
+  //fetching data from db.json 
   useEffect(() => {
     fetch("http://localhost:3005/exercises")
       .then((response) => response.json())
@@ -14,6 +14,7 @@ function ExerciseNewRender() {
 
   return (
     <ExerciseGrid>
+        
       {exe.map((exer) => {
         return (
           <ExerciseContainer key={exer.id} id="exercise">

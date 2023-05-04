@@ -6,9 +6,14 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { MdClose } from "react-icons/md";
 import Button from "./Button";
 const Navbar = () => {
-  const [isNavOpen, setIsNavOpen] = useState(false);
-  const html = document.querySelector("html");
-  html.addEventListener("click", (e) => setIsNavOpen(false));
+// Define a state variable `isNavOpen` and a function `setIsNavOpen` to update its value.
+const [isNavOpen, setIsNavOpen] = useState(false);
+
+// Select the HTML element and add an event listener that listens for a click event.
+// When the click event occurs, set the value of `isNavOpen` to false, which will close the navigation.
+const html = document.querySelector("html");
+html.addEventListener("click", (e) => setIsNavOpen(false));
+
 
   return (
     <Nav>

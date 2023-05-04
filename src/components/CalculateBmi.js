@@ -12,16 +12,18 @@ const CalculateBmi = () => {
 
   const calcBmi = (e) => {
     e.preventDefault();
-
+// Displaying error message if weight or height is not entered
     if (weight === 0 || height === 0) {
     toast.error('Please enter a valid weight and height!', {
       position: toast.POSITION.TOP_RIGHT,
     });
     
-     
+     // Calculating BMI and setting it to state
+  
     } else {
       let bmi = (weight / (height * height));
       setBmi(bmi.toFixed(1));
+  // Setting message based on BMI
 
       if (bmi < 18.5) {
         setMessage('You are underweight');
@@ -34,6 +36,7 @@ const CalculateBmi = () => {
       }
     }
   };
+// Function for reloading BMI calculator
 
   const reloadBmi = () => {
     window.location.reload();

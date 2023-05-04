@@ -4,6 +4,7 @@ import BodyPartImage from "../assets/images/bodyPart.png";
 import TargetImage from "../assets/images/target.png";
 import EquipmentImg from "../assets/images/equipment.png";
 const Detail = ({ exerciseDetail }) => {
+  // Destructuring exerciseDetail object for easy access to its properties
   const { bodyPart, equipment, gifUrl, name, target } = exerciseDetail;
   const ExtraDetails = [
     {

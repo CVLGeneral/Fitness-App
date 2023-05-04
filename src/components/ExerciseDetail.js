@@ -15,6 +15,9 @@ const ExerciseDetail = () => {
   const { id } = useParams();
   const [loaded, setLoaded] = useState(true);
 
+  
+  // This useEffect hook fetches the exercise details, as well as the exercises that target the same muscle group and use the same equipment.
+  
   useEffect(() => {
     const fetchExercisesData = async () => {
       const exerciseDBURL = "https://exercisedb.p.rapidapi.com";
@@ -40,8 +43,12 @@ const ExerciseDetail = () => {
     };
     fetchExercisesData();
 
-    window.scrollTo(0, -250);
+    window.scrollTo(0, -250); //// Scrolls to the top of the page
+
   }, [id]);
+
+  // The component returns the exercise details and related exercises, as well as a loading spinner that is shown for 4 seconds when the page is loading.
+// If the loaded state is false, the spinner is shown. Otherwise, the exercise details are displayed.
 
   useEffect(() => {
     let timer = setTimeout(() => setLoaded(false), 4000);

@@ -1,5 +1,11 @@
 {
-  "exercises": [    
-
+  "exercises": [
+    {
+      "name": "Bicep Curls",
+      "gifUrl": "https://sb-gym-hero.herokuapp.com/static/images/gym-visual/arms/04461301-EZ-Barbell-Close-grip-Curl_Upper-Arms_720.gif",
+      "category": "Arms",
+      "type": "bicep",
+      "id": 1
+    }
   ]
 }

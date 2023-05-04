@@ -5,18 +5,21 @@ import styled from "styled-components";
 import ExerciseCard from "../components/Exercisecard";
 const Exercises = ({ exercises, bodyPart, setExercises }) => {
    console.log(exercises);
-
+// Set initial state for current page
   const [currentPage, setCurrentPage] = useState(1);
+  // Set number of exercises per page
   const ExercisePerPage = 10;
+  // Calculate the index of the last exercise on the current page
   const indexOfLastExercise = currentPage * ExercisePerPage;
+  // Calculate the index of the first exercise on the current page
   const indexOfFirstExercise = indexOfLastExercise - ExercisePerPage;
+  // Slice the exercises array to only include exercises for the current page
   const currentExercises = exercises.slice(
     indexOfFirstExercise,
     indexOfLastExercise
   );
 
-  // useEffect(() =>)
-
+// Fetch exercise data from API when the body part changes
   useEffect(() => {
     const fetchExerciseData = async () => {
       let ExerciseData = [];
@@ -35,7 +38,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
     };
     fetchExerciseData();
   }, [bodyPart,setExercises]);
-
+// Function to handle pagination and scrolling to top of page
   const paginate = (e, value) => {
     setCurrentPage(value);
     window.scrollTo({ top: 1700, behavior: "smooth" });

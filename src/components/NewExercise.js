@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
+
 
 //This function is responsible for updating the server when new transaction is added
 function NewExercise() {
@@ -37,26 +39,55 @@ function NewExercise() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    <FormContainer onSubmit={handleSubmit}>
+      <InputContainer>
         Name:
         <input type="text" value={name} onChange={(event) => setName(event.target.value)} />
-      </label>
-      <label>
+      </InputContainer>
+      <InputContainer>
         Gif URL:
         <input type="text" value={gifUrl} onChange={(event) => setGifURL(event.target.value)} />
-      </label>
-      <label>
+      </InputContainer>
+      <InputContainer>
         Category:
         <input type="text" value={category} onChange={(event) => setCategory(event.target.value)} />
-      </label>
-      <label>
-        TYpe:
+      </InputContainer>
+      <InputContainer>
+        Type:
         <input type="text" value={type} onChange={(event) => setType(event.target.value)} />
-      </label>
-      <button type="submit">Add Exercise</button>
-    </form>
+      </InputContainer>
+      <SubmitButton type="submit">Add Exercise</SubmitButton>
+    </FormContainer>
   );
 }
+const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const InputContainer = styled.label`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+
+  input {
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 16px;
+  }
+`;
+
+const SubmitButton = styled.button`
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #1460e5;
+  color: white;
+  margin-bottom: 20px;
+  font-size: 16px;
+  cursor: pointer;
+`;
 
 export default NewExercise;

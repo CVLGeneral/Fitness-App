@@ -62,6 +62,7 @@ const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
     },
   ];
 
+// Loop through an array of BodyPartImage objects and assign text property from data array to each object
   for (let i = 0; i < 11; i++) {
     BodyPartImage[i].text = data[i];
   }
@@ -69,7 +70,7 @@ const HomeHorizontalScrollbar = ({ data, bodyPart, setBodyPart }) => {
 
   // Adding Arrows
   const ref = useRef(null);
-
+// Define event handlers for scrolling left and right
   const LeftHandler = () => {
     ref.current.scrollLeft -= 200;
   };

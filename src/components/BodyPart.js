@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
+//item,img,setBodyPart and BodyPart are pass as props from HomeHorizontalScrollbar component
+
 const BodyPart = ({ item, img, setBodyPart, BodyPart }) => {
   return (
     <Card

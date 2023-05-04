@@ -39,7 +39,7 @@ const SearchExercise = ({
         ExerciseOptions
       );
       //   console.log(exercisesData);
-
+//handle the searched exercise
       const searchExercises = exercisesData.filter(
         (exercise) =>
           exercise.name.toLowerCase().includes(search) ||
