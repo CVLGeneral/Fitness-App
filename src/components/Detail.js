@@ -27,7 +27,7 @@ const Detail = ({ exerciseDetail }) => {
       <div className="content">
         <h3 className="heading">{name}</h3>
 
-        <p className="discription">
+        <p className="description">
           Exercises keep you strong.{" "}
           <strong style={{ color: "#1460e5" }}>{name}</strong> is the one of the
           best exercises to target your{" "}
@@ -77,7 +77,7 @@ const DetailCard = styled.div`
       font-weight: bold;
       text-transform: capitalize;
     }
-    .discription {
+    .description {
       margin-top: 1rem;
       font-size: 1.3rem;
       font-weight: 500;
