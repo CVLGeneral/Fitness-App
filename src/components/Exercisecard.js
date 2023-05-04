@@ -6,6 +6,7 @@ const ExerciseCard = ({ exercise, index }) => {
   let str;
   const length = exercise.name.length;
     // If the name is too long, truncate it and add ellipsis
+
   if (length > 29) {
     str = exercise.name.slice(0, 29);
     str = str.concat(`...`);
