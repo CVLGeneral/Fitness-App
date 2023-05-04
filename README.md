@@ -60,7 +60,7 @@
 <h2>Styling</h2>
 <p>The INFININITY FITNESS App uses Chakra UI, Styled Components and Material-UI for styling.</p>
 <h2>Author</h2>
-This Transaction Tracker App application was created by: 
+This Infinity Fitness App application was created by: 
 <ol>
 <li>Kiprotich Ngetich Leonard</li>
 <li>David Maina</li>
