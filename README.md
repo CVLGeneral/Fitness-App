@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>INFININITY FITNESS App</title>
-</head>
+
 <body>
 	<h1>The INFININITY FITNESS App</h1>
 	<p>The INFININITY FITNESS App is a web application that provides a comprehensive list of exercises categorized by body parts. Users can select a body part to view exercises related to that part and also search for exercises by name. Additionally, users can view detailed information about each exercise, including instructional videos and descriptions.</p>
