@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 
 //This function is responsible for updating the server when new transaction is added
-function NewExercise() {
+function NewExercise({onAddExercise}) {
   const [name, setName] = useState('');
   const [gifUrl, setGifURL] = useState('');
   const [category,setCategory]=useState('')
@@ -30,7 +30,7 @@ function NewExercise() {
       body: JSON.stringify(newExercise)
     })
     .then(response => response.json())
-    .then(data => console.log(data))
+    .then(data => onAddExercise(data))
     .catch(error => console.error(error));
     setName('');
     setGifURL('');
@@ -64,6 +64,9 @@ const FormContainer = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top:150px;
+  margin-bottom: 205px;
+
 `;
 
 const InputContainer = styled.label`
@@ -76,7 +79,7 @@ const InputContainer = styled.label`
     padding: 5px;
     border-radius: 5px;
     border: 1px solid gray;
-    font-size: 16px;
+    font-size: 20px;
   }
 `;
 

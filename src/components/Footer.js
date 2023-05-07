@@ -49,6 +49,10 @@ const Div = styled.div`
   gap: 10.0rem;
   justify-content: space-around;
   align-items: center;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
   .footer {
     display: flex;
     justify-content: center;

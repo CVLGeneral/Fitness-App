@@ -7,14 +7,14 @@ import Home from "./components/Home"
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CalculateBmi from "./components/CalculateBmi"
-import ExerciseNewRender from "./components/ExerciseNewRender"
+import NewExercise from "./components/NewExercise";
 
 
 import { Routes, Route } from "react-router-dom";
 
 import ExerciseDetail from "./components/ExerciseDetail"
 import Loader from "./components/Loader";
-import NewExercise from "./components/NewExercise";
+
 
 
 
@@ -43,13 +43,12 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path={`/exercise/:id`} element={<ExerciseDetail />} />
-            <Route path="bmi" element={<CalculateBmi/>} />
+            <Route path="/bmi" element={<CalculateBmi/>} />
+            <Route path="/form" element={<NewExercise/>} />
+
           </Routes>
-          <ExerciseNewRender />
 
-          <CalculateBmi/>
 
-          <NewExercise/>
 
           <Footer />
         </Section>

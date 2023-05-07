@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import React, { useEffect, useState } from "react";
+import NewExercise from "./NewExercise";
 
 function ExerciseNewRender() {
   const [exe, setExe] = useState([]);
@@ -8,9 +9,15 @@ function ExerciseNewRender() {
     fetch("http://localhost:3005/exercises")
       .then((response) => response.json())
       .then((data) => {
+        console.log(data)
         setExe(data);
       });
   }, []);
+
+  // To update the server when new transaction is added
+  const addExercise = (newExercise) => {
+    setExe([...exe, newExercise]);
+  };
 
   return (
     <ExerciseGrid>
@@ -18,7 +25,6 @@ function ExerciseNewRender() {
       {exe.map((exer) => {
         return (
           <ExerciseContainer key={exer.id} id="exercise">
-            <div className="card">
               <div className="image">
                 <img src={exer.gifUrl} alt={exer.name} loading="lazy" />
               </div>
@@ -27,34 +33,40 @@ function ExerciseNewRender() {
                 <span className="btn btn2">{exer.type}</span>
               </div>
               <h3>{exer.name}</h3>
-            </div>
           </ExerciseContainer>
         );
       })}
+      <div className="newexe">
+      <NewExercise onAddExercise={addExercise}/>
+      </div>
+
     </ExerciseGrid>
   );
+  
 }
 
 const ExerciseGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 19rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 
   /* Display cards horizontally on larger screens */
   @media screen and (min-width: 768px) {
     grid-template-columns: repeat(auto-fit, minmax(392px, 1fr));
   }
+  .newexe {
+    display: none
+  }
 `;
 
 const ExerciseContainer = styled.div`
   padding: 2rem 1rem;
-  width: 392px;
-  height: 536.09px;
+  width: max-content;
+  height: max-content;
   display: flex;
   flex-direction: column;
 
-  justify-content: space-between; // add this property
-  margin-left: 80px;
+  margin-left: 20px;
   gap: 2rem;
   border-radius: 9px;
   box-shadow: rgba(0, 0, 0, 128) 0px 3px 6px, rgba(0, 0, 0, 128) 0px 3px 6px;
@@ -63,23 +75,25 @@ const ExerciseContainer = styled.div`
     box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 20px 1px,
       rgba(14, 30, 37, 0.2) 0px 2px 16px 1px;
   }
+
   .image {
-    width: 80%;
-    margin: auto auto;
+    width: 288px;
+    heigth:288px;
+    margin:auto auto;
     img {
       width: 100%;
     }
   }
-
   .content {
     display: flex;
+    height:50.5px;
+    width: 360px;
     justify-content: space-around;
     gap: 2rem;
     font-size: 1rem;
     .btn {
       padding: 1rem 2rem;
       border: none;
-      margin-top: 32px;
       background-color: #1460e5;
       text-transform: capitalize;
       border-radius: 15px;
@@ -107,7 +121,9 @@ const ExerciseContainer = styled.div`
   h3 {
     font-size: 1.3rem;
     text-align: center;
-    margin-top: 52px;
+    height:24px;
+    width:360px;
+    margin-bottom:20px;
     color: #000;
     font-weight: 600;
     text-transform: capitalize;

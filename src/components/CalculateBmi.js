@@ -50,12 +50,12 @@ const CalculateBmi = () => {
       p="20px"
       id="bmi"
       
-      sx={{ mt: { lg: '212px', xs: '70px' } }}
+      sx={{ mt: { lg: '12px', xs: '10px' } }}
     >
       <Typography
         fontWeight={700}
         sx={{ fontSize: { lg: '44px', xs: '30px' } }}
-        mb="50px"
+        mb="0px"
         textAlign="center"
         variant='h1'
       >

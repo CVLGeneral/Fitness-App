@@ -3,9 +3,9 @@ export const ExerciseOptions = {
     url: "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
     headers: {
         'content-type': 'application/octet-stream',
-		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com',
-        'X-RapidAPI-Key': '87229d1093mshf923f7bdafc3495p15da68jsn4fea4bfb504c',
-        },
+		'X-RapidAPI-Key': '9108bbbd40msh4b0ff3512c2253ep13028djsn72e4274fa98a',
+		'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+           },
   };
   
 

@@ -3,12 +3,13 @@ import Pagination from "@mui/material/Pagination";
 import { FetchData, ExerciseOptions } from "../utlis/FetchData";
 import styled from "styled-components";
 import ExerciseCard from "../components/Exercisecard";
+import ExerciseNewRender from "./ExerciseNewRender";
 const Exercises = ({ exercises, bodyPart, setExercises }) => {
    console.log(exercises);
 // Set initial state for current page
   const [currentPage, setCurrentPage] = useState(1);
   // Set number of exercises per page
-  const ExercisePerPage = 10;
+  const ExercisePerPage = 12;
   // Calculate the index of the last exercise on the current page
   const indexOfLastExercise = currentPage * ExercisePerPage;
   // Calculate the index of the first exercise on the current page
@@ -66,6 +67,7 @@ const Exercises = ({ exercises, bodyPart, setExercises }) => {
           />
         )}
       </PaginationDiv>
+      <ExerciseNewRender/>
     </ExerciseContainer>
   );
 };
@@ -131,6 +133,7 @@ const PaginationDiv = styled.div`
   display: flex;
   justify-content: center;
   margin-top: 6rem;
+  margin-bottom: 6rem;
   font-size: 1.3rem;
   @media screen and (min-width: 320px) and (max-width: 520px) {
     font-size: 0.2rem;

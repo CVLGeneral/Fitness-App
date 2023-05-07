@@ -37,13 +37,20 @@ html.addEventListener("click", (e) => setIsNavOpen(false));
         <Link to="/" className="tag">
           Home
         </Link>
+
+
         <a className="tag" href="#exercise">
           Exercises
         </a>
-
-        <a className="tag" href="#bmi">
+        <Link to="/bmi" className="tag">
           BMI
-        </a>
+        </Link>
+        <Link to="/form" className="tag">
+          Form
+        </Link>
+
+
+
 
         <Button
           className={` ${isNavOpen ? "tag" : ""}`}
