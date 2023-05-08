@@ -7,7 +7,7 @@
 	<p>This project was built using React and the Chakra UI, Styled Components and Material-UI libraries for styling.</p>
 
 <h2>Netlify Link</h2>
-  <a href="https://6453f1e778622b25ec052bda--sprightly-sorbet-b0a940.netlify.app/" target="_blank">Live</a>
+  <a href="https://main--monumental-creponne-9c8c5f.netlify.app/" target="_blank">Live</a>
 </body>
 <h2>Features</h2>
 <ul>
