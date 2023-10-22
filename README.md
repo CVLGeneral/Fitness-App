@@ -2,8 +2,8 @@
 <html lang="en">
 
 <body>
-	<h1>The INFININITY FITNESS App</h1>
-	<p>The INFININITY FITNESS App is a web application that provides a comprehensive list of exercises categorized by body parts. Users can select a body part to view exercises related to that part and also search for exercises by name. Additionally, users can view detailed information about each exercise, including instructional videos and descriptions.</p>
+	<h1>The INFINITY FITNESS App</h1>
+	<p>The INFINITY FITNESS App is a web application that provides a comprehensive list of exercises categorized by body parts. Users can select a body part to view exercises related to that part and also search for exercises by name. Additionally, users can view detailed information about each exercise, including instructional videos and descriptions.</p>
 	<p>This project was built using React and the Chakra UI, Styled Components and Material-UI libraries for styling.</p>
 
 <h2>Netlify Link</h2>
@@ -36,10 +36,10 @@
 </ol>
 
 <h2>Data Fetching</h2>
-<p>The INFININITY FITNESS App fetches exercise data from an API using fetch. The data is then stored in state using the useState hook. The API endpoint and headers are defined in the FetchData.js file.</p>
+<p>The INFINITY FITNESS App fetches exercise data from an API using fetch. The data is then stored in state using the useState hook. The API endpoint and headers are defined in the FetchData.js file.</p>
 
 <h2>Components</h2>
-<p>The INFININITY FITNESS App is made up of the following components:</p>
+<p>The INFINITY FITNESS App is made up of the following components:</p>
 <ul>
 	<li>BodyPart: Renders a button for each body part category</li>
 	<li>Button: Renders a custom button component</li>
@@ -58,7 +58,7 @@
 </ul>
 
 <h2>Styling</h2>
-<p>The INFININITY FITNESS App uses Chakra UI, Styled Components and Material-UI for styling.</p>
+<p>The INFINITY FITNESS App uses Chakra UI, Styled Components and Material-UI for styling.</p>
 <h2>Author</h2>
 This Infinity Fitness App application was created by: 
 <ol>
