@@ -13,7 +13,7 @@ const Footer = () => {
       </div>
       <div className="creator">
         {" "}
-        Created by <a href="https://github.com/CVLGeneral">Group 3</a>
+        Created by David Maina
       </div>
       <div className="foot">      
        
@@ -34,7 +34,7 @@ const Footer = () => {
         </li>
      </div>
 
-     <p style={{color: "#fff"}}>Contact us: @groupthree</p>
+     <p style={{color: "#fff"}}>Contact: 0721823123</p>
 
 
 
